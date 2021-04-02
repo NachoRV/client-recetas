@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { getRecipes } from '../services/recipe.service'
-import Layout from '../components/layout'  
+import Layout from '../components/layout'
+import Nav from '../components/nav'
 
 function Home({res}) {
   return (
     <Layout>
+    <Nav></Nav>
       <div>
         {
           res.map((r) => <h1 key={r._id}>{r.title}</h1>)
